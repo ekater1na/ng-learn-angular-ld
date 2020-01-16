@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-artist-details',
-  templateUrl: './artist-details.component.html',
-  inputs: ['artist']
+  templateUrl: './artist-details.component.html'  
 })
 export class ArtistDetailsComponent implements OnInit {
 
   constructor() { }
+  
+  @Input() artist;
 
   ngOnInit() {
+    
   }
 
 }
