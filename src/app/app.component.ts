@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,27 +13,26 @@ import { HttpClient } from '@angular/common/http'
     `
   ]
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   query: string;
   artists: object;
-  currentArtist: object
+  currentArtist: object;
 
   showArtist(item) {
     this.query = item.name;
     item.highlight = !item.highlight;
-    this.currentArtist = item
+    this.currentArtist = item;
   }
 
   constructor( private http: HttpClient) {
     this.query = '';
-    this.artists = []
+    this.artists = [];
   }
 
   ngOnInit(): void {
-    this.http.get<Object>('../assets/data.json').subscribe( 
-      data => {
+    this.http.get<object>('../assets/data.json').subscribe( data => {
         this.artists = data;
-      })
+      });
   }
-  
+
 }
