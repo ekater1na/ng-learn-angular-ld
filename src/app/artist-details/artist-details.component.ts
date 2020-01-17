@@ -8,7 +8,7 @@ export class ArtistDetailsComponent implements OnInit {
 
   constructor() { }
   
-  @Input() artist;
+  @Input() artist: any;
 
   ngOnInit() {
     

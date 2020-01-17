@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   })
 export class ArtistItemsComponent implements OnInit {
 
-  @Input() artist;
+  @Input() artist: any;
   
   constructor() { }
 
